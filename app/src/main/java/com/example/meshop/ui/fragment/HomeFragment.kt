@@ -30,7 +30,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         setUpRecyclerView()
 
 
-        // add comment
+
         val array = arrayListOf<PreviewProductItems>(
                 PreviewProductItems(1,"iphone X2211","losAngles Apple Store  ","50,000,000","https"),
                 PreviewProductItems(2,"samsung S20 forSell","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
