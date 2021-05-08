@@ -1,6 +1,5 @@
 package com.example.meshop.adapter
 
-import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,21 +7,21 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.meshop.R
-import com.example.meshop.model.MinimalProductItems
+import com.example.meshop.model.PreviewProductItems
 import kotlinx.android.synthetic.main.preview_product_design.view.*
 
 
-class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+class PreviewProductAdapter: RecyclerView.Adapter<PreviewProductAdapter.ProductViewHolder>() {
 
     inner class ProductViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
-    private val differCallback = object : DiffUtil.ItemCallback<MinimalProductItems>() {
-        override fun areItemsTheSame(oldItem: MinimalProductItems, newItem: MinimalProductItems): Boolean {
+    private val differCallback = object : DiffUtil.ItemCallback<PreviewProductItems>() {
+        override fun areItemsTheSame(oldItem: PreviewProductItems, newItem: PreviewProductItems): Boolean {
             return oldItem.id == newItem.id
         }
 
 
-        override fun areContentsTheSame(oldItem: MinimalProductItems, newItem: MinimalProductItems): Boolean {
+        override fun areContentsTheSame(oldItem: PreviewProductItems, newItem: PreviewProductItems): Boolean {
             return oldItem == newItem
         }
     }

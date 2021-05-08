@@ -11,13 +11,16 @@ import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.interfaces.TouchListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.meshop.R
-import com.example.meshop.adapter.ProductAdapter
-import com.example.meshop.model.MinimalProductItems
+import com.example.meshop.adapter.PreviewProductAdapter
+import com.example.meshop.adapter.PreviewShopAdapter
+import com.example.meshop.model.PreviewProductItems
+import com.example.meshop.model.PreviewShopItems
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
 
-    lateinit var productAdapter: ProductAdapter
+    lateinit var previewProductAdapter: PreviewProductAdapter
+    lateinit var previewShopAdapter: PreviewShopAdapter
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -28,11 +31,17 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
 
 
 
-        val array = arrayListOf<MinimalProductItems>(
-                MinimalProductItems(1,"iphone X2211","losAngles Apple Store  ","50,000,000","https"),
-                MinimalProductItems(2,"samsung S20 forSell","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
-                MinimalProductItems(3,"laptop asus FX553VD GL553VD FX553Vd","shop3","25,000,000","https"))
-        productAdapter.differ.submitList(array.toList())
+        val array = arrayListOf<PreviewProductItems>(
+                PreviewProductItems(1,"iphone X2211","losAngles Apple Store  ","50,000,000","https"),
+                PreviewProductItems(2,"samsung S20 forSell","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
+                PreviewProductItems(3,"laptop asus FX553VD GL553VD FX553Vd","shop3","25,000,000","https"))
+        previewProductAdapter.differ.submitList(array.toList())
+
+        val array2 = arrayListOf<PreviewShopItems>(
+            PreviewShopItems(1,"shop 1 this is in isfahan city",2.5f,"image"),
+            PreviewShopItems(2,"shop 2 places in tehran city",3.5f,"image"),
+            PreviewShopItems(3,"shop 3 place in shiraz city",5.0f,"image"))
+        previewShopAdapter.differ.submitList(array2.toList())
     }
 
     private fun setUpSlider(){
@@ -67,9 +76,15 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
     }
 
     private fun setUpRecyclerView(){
-        productAdapter = ProductAdapter()
+        previewProductAdapter = PreviewProductAdapter()
         rv_home_row_one.apply {
-            adapter = productAdapter
+            adapter = previewProductAdapter
+            layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        }
+
+        previewShopAdapter = PreviewShopAdapter()
+        rv_home_row_shop.apply {
+            adapter = previewShopAdapter
             layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         }
     }
