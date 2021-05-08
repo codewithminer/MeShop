@@ -1,5 +1,6 @@
 package com.example.meshop.adapter
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.meshop.R
 import com.example.meshop.model.MinimalProductItems
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.product_design.view.*
+import kotlinx.android.synthetic.main.preview_product_design.view.*
 
 
 class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
@@ -32,7 +32,7 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         return ProductViewHolder(
                 LayoutInflater.from(parent.context).inflate(
-                        R.layout.product_design,
+                        R.layout.preview_product_design,
                         parent,
                         false
                 )
@@ -42,9 +42,9 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = differ.currentList[position]
         holder.itemView.apply {
-            tv_title_product.text = product.title
-            tv_shop_product.text = product.shop
-            tv_price_product.text = "${product.price} R"
+            tv_prev_product_title.text = product.title
+            tv_prev_product_shop_name.text = product.shop
+            tv_prev_product_price.text = "${product.price}"
 
 //            Picasso.get().load("http://site/${product.urlImage}").into(iv_product)
 

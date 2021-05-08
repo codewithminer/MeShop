@@ -1,11 +1,8 @@
 package com.example.meshop.ui.fragment
 
 import android.annotation.SuppressLint
-import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ActionTypes
@@ -17,7 +14,6 @@ import com.example.meshop.R
 import com.example.meshop.adapter.ProductAdapter
 import com.example.meshop.model.MinimalProductItems
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.product_design.*
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
 
@@ -32,9 +28,10 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
 
 
 
-        val array = arrayListOf<MinimalProductItems>(MinimalProductItems(1,"one","shop1","1000","https"),
-                MinimalProductItems(2,"two","shop2","2000","https"),
-                MinimalProductItems(3,"three","shop3","3000","https"))
+        val array = arrayListOf<MinimalProductItems>(
+                MinimalProductItems(1,"iphone X2211","losAngles Apple Store  ","50,000,000","https"),
+                MinimalProductItems(2,"samsung S20 forSell","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
+                MinimalProductItems(3,"laptop asus FX553VD GL553VD FX553Vd","shop3","25,000,000","https"))
         productAdapter.differ.submitList(array.toList())
     }
 
