@@ -40,7 +40,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         val array2 = arrayListOf<PreviewShopItems>(
             PreviewShopItems(1,"shop 1 this is in isfahan city",2.5f,"image"),
             PreviewShopItems(2,"shop 2 places in tehran city",3.5f,"image"),
-            PreviewShopItems(3,"shop 33 place in shiraz city",5.0f,"image"))
+            PreviewShopItems(3,"shop 3 place in shiraz city",5.0f,"image"))
         previewShopAdapter.differ.submitList(array2.toList())
     }
 
