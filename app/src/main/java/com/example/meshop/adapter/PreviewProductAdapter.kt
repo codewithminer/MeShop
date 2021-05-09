@@ -43,6 +43,7 @@ class PreviewProductAdapter: RecyclerView.Adapter<PreviewProductAdapter.ProductV
         holder.itemView.apply {
             tv_prev_product_title.text = product.title
             tv_prev_product_shop_name.text = product.shop
+            tv_prev_product_shop_city.text = product.city
             tv_prev_product_price.text = "${product.price}"
 
 //            Picasso.get().load("http://site/${product.urlImage}").into(iv_product)
