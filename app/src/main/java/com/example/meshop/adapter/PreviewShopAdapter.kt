@@ -41,6 +41,7 @@ class PreviewShopAdapter: RecyclerView.Adapter<PreviewShopAdapter.ShopViewHolder
         val shop = differ.currentList[position]
         holder.itemView.apply {
             tv_prev_shop_title.text = shop.name
+            tv_prev_shop_city.text = shop.city
             shop.star?.let { rb_prev_shop.rating = it }
 //            Picasso.get().load(shop.urlImage).into(iv_prev_shop_design)
         }

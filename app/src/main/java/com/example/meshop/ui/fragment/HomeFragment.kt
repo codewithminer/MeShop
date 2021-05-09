@@ -34,33 +34,33 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
 
 
         val array1 = arrayListOf<PreviewShopItems>(
-            PreviewShopItems(1,"shop 1 this is in isfahan city",2.5f,"image"),
-            PreviewShopItems(2,"shop 2 places in tehran city",3.5f,"image"),
-            PreviewShopItems(3,"shop 3 place in shiraz city",5.0f,"image"))
+            PreviewShopItems(1,"shop 1 this is in isfahan city","shiraz,Isfahan TehranTabrizmashhad",2.5f,"image"),
+            PreviewShopItems(2,"shop 2 places in tehran city","shiraz",3.5f,"image"),
+            PreviewShopItems(3,"shop 3 place in shiraz city","shiraz",5.0f,"image"))
         previewShopAdapter.differ.submitList(array1.toList())
 
         val array2 = arrayListOf<PreviewProductItems>(
-                PreviewProductItems(1,"men product 1","losAngles Apple Store  ","50,000,000","https"),
-                PreviewProductItems(2,"men product 2","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
-                PreviewProductItems(3,"men product 3","shop3","25,000,000","https"))
+                PreviewProductItems(1,"men product 1men product 1 men product 1","losAngles Apple Store losAngles Apple Store  ","shiraz,Isfahan TehranTabrizmashhad","50,000,000","https"),
+                PreviewProductItems(2,"men product 2","samsung store in kore,Iran,china,japan,afghanistan","isfahan","20,000,000","https"),
+                PreviewProductItems(3,"men product 3","shop3","tehran","25,000,000","https"))
         previewProductAdapterMen.differ.submitList(array2.toList())
 
         val array3 = arrayListOf<PreviewProductItems>(
-                PreviewProductItems(1,"women product 1","losAngles Apple Store  ","50,000,000","https"),
-                PreviewProductItems(2,"women product 2","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
-                PreviewProductItems(3,"women product 3","shop3","25,000,000","https"))
+                PreviewProductItems(1,"women product 1","losAngles Apple Store  ","shiraz,Isfahan TehranTabrizmashhad","50,000,000","https"),
+                PreviewProductItems(2,"women product 2","samsung store in kore,Iran,china,japan,afghanistan","tabriz","20,000,000","https"),
+                PreviewProductItems(3,"women product 3","shop3","mashhad","25,000,000","https"))
         previewProductAdapterWomen.differ.submitList(array3.toList())
 
         val array4 = arrayListOf<PreviewProductItems>(
-                PreviewProductItems(1,"boy product 1","losAngles Apple Store  ","50,000,000","https"),
-                PreviewProductItems(2,"boy product 2","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
-                PreviewProductItems(3,"boy product 3","shop3","25,000,000","https"))
+                PreviewProductItems(1,"boy product 1","losAngles Apple Store  ","tehran","50,000,000","https"),
+                PreviewProductItems(2,"boy product 2","samsung store in kore,Iran,china,japan,afghanistan","tehran","20,000,000","https"),
+                PreviewProductItems(3,"boy product 3","shop3","tehran","25,000,000","https"))
         previewProductAdapterBoy.differ.submitList(array4.toList())
 
         val array5 = arrayListOf<PreviewProductItems>(
-                PreviewProductItems(1,"girl product 1","losAngles Apple Store  ","50,000,000","https"),
-                PreviewProductItems(2,"girl product 2","samsung store in kore,Iran,china,japan,afghanistan","20,000,000","https"),
-                PreviewProductItems(3,"girl product 3","shop3","25,000,000","https"))
+                PreviewProductItems(1,"girl product 1","losAngles Apple Store  ","tehran","50,000,000","https"),
+                PreviewProductItems(2,"girl product 2","samsung store in kore,Iran,china,japan,afghanistan","tehran","20,000,000","https"),
+                PreviewProductItems(3,"girl product 3","shop3","shiraz,Isfahan TehranTabrizmashhad","25,000,000","https"))
         previewProductAdapterGirl.differ.submitList(array5.toList())
     }
 
