@@ -41,7 +41,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
 
         val array2 = arrayListOf<PreviewProductItems>(
                 PreviewProductItems(1,"men product 1men product 1 men product 1","losAngles Apple Store losAngles Apple Store  ","shiraz,Isfahan TehranTabrizmashhad","50,000,000","https"),
-                PreviewProductItems(2,"men product 2","samsung store in kore,Iran,china,japan,afghanistan","isfahan","20,000,000","https"),
+                PreviewProductItems(2,"شلوار جین در فروشگاه دیجیکالا را ببینید و به آن امتیاز دهید و حمایت کنید","samsung store in kore,Iran,china,japan,afghanistan","isfahan","20,000,000","https"),
                 PreviewProductItems(3,"men product 3","shop3","tehran","25,000,000","https"))
         previewProductAdapterMen.differ.submitList(array2.toList())
 
